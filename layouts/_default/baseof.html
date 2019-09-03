@@ -24,6 +24,9 @@
 	{{- if not .Site.IsServer }}
 		{{ template "_internal/google_analytics_async.html" . }}
 	{{- end }}
+	{{- if not .Site.IsServer }}
+		{{ partial "head.html" . }}
+	{{- end }}
 </head>
 <body class="body">
 	<div class="container container--outer">
